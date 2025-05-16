@@ -55,7 +55,7 @@ You can use AI-in-terminal in two ways:
 
 ### 1. Shell Integration (recommended)
 
-After completing step 4 of the setup, you can access an interactive prompt from your terminal by pressing `Ctrl+K`.  
+You can access an interactive prompt from your terminal by pressing `Ctrl+K`.  
 
 - To ask a generic question: Prefix your query with `Q `  
 
