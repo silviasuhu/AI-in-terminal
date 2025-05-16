@@ -1,6 +1,6 @@
 # AI-in-terminal
 
-A command-line tool that uses LLMs (Large Language Models) to answer questions and retrieve commands, with support for retrieval-augmented generation (RAG) and persistent vector storage using ChromaDB.
+Enhance your productivity by effortlessly requesting commands, exploring your directory environment, or asking general questions — directly to an LLM from your terminal.
 
 ## Features
 
