@@ -42,10 +42,10 @@ def ask_command_to_llm(query):
                     "Do NOT include commentary or Markdown triple-backtick code blocks, "
                     "as your whole response will be copied into my terminal automatically. "
                     "Say don't know if you don't know the answer.\n\n"
-                    "This is a list of information that define what are the commands I personally use:\n"
-                    "<info>\n"
+                    "The following sources of information explain what are the commands I personally use:\n"
+                    "<source>\n"
                     "{context}\n"
-                    "</info>"
+                    "</source>"
                 ),
             ),
             ("human", "The command/s should do this: {query}"),
