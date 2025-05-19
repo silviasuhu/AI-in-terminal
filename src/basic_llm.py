@@ -2,7 +2,7 @@ import os
 import subprocess
 
 from dotenv import load_dotenv
-from langchain_openai import AzureChatOpenAI
+from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain.chains import create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
@@ -20,10 +20,8 @@ def ask_command_to_llm(query):
     shell = os.environ.get("SHELL")
     machine = get_machine_info()
 
-    llm = AzureChatOpenAI(
-        model="gpt-4.1-nano",
-        temperature=0,
-        api_version="2024-12-01-preview",
+    llm = ChatOpenAI(
+        model="gpt-4.1-mini",
     )
 
     vector_store = get_vector_store()
@@ -70,10 +68,8 @@ def ask_command_to_llm(query):
 
 def ask_generic_question_to_llm(query):
 
-    llm = AzureChatOpenAI(
-        model="gpt-4.1-nano",
-        temperature=0,
-        api_version="2024-12-01-preview",
+    llm = ChatOpenAI(
+        model="gpt-4.1-mini",
     )
 
     prompt_template = ChatPromptTemplate(

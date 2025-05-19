@@ -6,7 +6,7 @@ import requests
 
 
 from dotenv import load_dotenv
-from langchain_openai import AzureChatOpenAI
+from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.tools import tool
 from langchain.agents import AgentExecutor
@@ -88,10 +88,8 @@ def get_jira_info():
 
 def ask_env_question_to_llm(query):
 
-    llm = AzureChatOpenAI(
-        model="gpt-4.1-nano",
-        temperature=0,
-        api_version="2024-12-01-preview",
+    llm = ChatOpenAI(
+        model="gpt-4.1-mini",
     )
 
     prompt_template = ChatPromptTemplate(
