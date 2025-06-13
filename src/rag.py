@@ -1,5 +1,5 @@
 import os
-from langchain_openai import AzureOpenAIEmbeddings
+from langchain_openai import OpenAIEmbeddings
 from langchain_chroma import Chroma
 from dotenv import load_dotenv
 
@@ -11,7 +11,7 @@ persistent_dir = os.path.join(current_dir, "../db", "chroma_db_commands")
 
 def get_vector_store():
 
-    embeddings = AzureOpenAIEmbeddings(
+    embeddings = OpenAIEmbeddings(
         model="text-embedding-3-small",
     )
 

@@ -31,6 +31,11 @@ def main():
     text_splitter = CharacterTextSplitter(chunk_size=100, chunk_overlap=20)
     docs = text_splitter.split_documents(documents)
 
+    # Finish if no documents were loaded
+    if not docs:
+        print("No documents found in the commands file.")
+        return
+
     print("\n--- Document Chunks Information ---")
     print(f"Number of chunks: {len(docs)}")
     print(f"First chunk: {docs[0].page_content[:100]}...")

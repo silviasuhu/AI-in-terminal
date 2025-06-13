@@ -3,12 +3,6 @@ import sys
 import logging
 
 from dotenv import load_dotenv
-from langchain_openai import AzureChatOpenAI
-from langchain_core.prompts import ChatPromptTemplate
-from langchain.chains import create_retrieval_chain
-from langchain.chains.combine_documents import create_stuff_documents_chain
-from langchain_chroma import Chroma
-from rag import get_vector_store
 from agent_llm import ask_env_question_to_llm
 from basic_llm import ask_generic_question_to_llm, ask_command_to_llm
 
